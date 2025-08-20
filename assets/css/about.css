@@ -1,0 +1,198 @@
+/* ==================== Reset ==================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ==================== Variables ==================== */
+:root {
+  --clr-bg-light: #fff9e6;   /* light yellow */
+  --clr-bg-dark: #1a1a1a;
+  --clr-text-light: #1a1a1a;
+  --clr-text-dark: #f1f1f1;
+  --clr-accent: #ff9900;
+  --clr-muted-light: #666666;
+  --clr-muted-dark: #cccccc;
+
+  --sp-sm: 1rem;
+  --sp-md: 2rem;
+  --sp-lg: 3rem;
+
+  --fs-sm: 0.9rem;
+  --fs-base: 1rem;
+  --fs-lg: 1.5rem;
+  --fs-xl: 2rem;
+}
+
+/* ==================== Base ==================== */
+body {
+  font-family: system-ui, sans-serif;
+  background: var(--clr-bg-light);
+  color: var(--clr-text-light);
+  line-height: 1.6;
+  transition: all 0.3s ease;
+}
+
+.container {
+  max-width: 900px;
+  width: 90%;
+  margin: 0 auto;
+  padding: var(--sp-md) 0;
+}
+
+h1, h2 {
+  font-weight: 600;
+  margin-bottom: var(--sp-sm);
+}
+
+p {
+  margin-bottom: var(--sp-md);
+  color: var(--clr-muted-light);
+}
+
+/* ==================== Header ==================== */
+.site-header {
+  border-bottom: 1px solid #e0e0e0;
+  background: inherit;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: var(--sp-sm) 0;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: var(--fs-lg);
+}
+
+.nav-links {
+  display: flex;
+  gap: var(--sp-md);
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--clr-accent);
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: var(--fs-lg);
+  cursor: pointer;
+}
+
+/* ==================== Profile Image ==================== */
+.profile-image {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--sp-lg);
+}
+
+.profile-image img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid var(--clr-accent);
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* ==================== Sections ==================== */
+.intro-section, .designing, .journey, .hobbies, .goals {
+  padding: var(--sp-md) 0;
+}
+
+/* ==================== Quote ==================== */
+.quote-box {
+  text-align: center;
+  padding: var(--sp-md);
+  border-left: 4px solid var(--clr-accent);
+  font-style: italic;
+  background: #fff3cc;
+  border-radius: 4px;
+  max-width: 600px;
+  margin: var(--sp-md) auto;
+}
+
+/* ==================== Footer ==================== */
+.site-footer {
+  text-align: center;
+  padding: var(--sp-md) 0;
+  background: #fef6e3;
+}
+
+.site-footer p {
+  font-size: var(--fs-sm);
+  margin-bottom: var(--sp-sm);
+  color: var(--clr-muted-light);
+}
+
+.social-links a {
+  margin: 0 0.5rem;
+  text-decoration: none;
+  color: inherit;
+  transition: 0.2s;
+}
+
+.social-links a:hover {
+  color: var(--clr-accent);
+}
+
+/* ==================== Responsive ==================== */
+@media (max-width: 768px) {
+  .profile-image img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+}
+
+/* ==================== Dark Mode ==================== */
+body.dark-mode {
+  background: var(--clr-bg-dark);
+  color: var(--clr-text-dark);
+}
+
+body.dark-mode p {
+  color: var(--clr-muted-dark);
+}
+
+body.dark-mode .quote-box {
+  background: #333;
+  border-left-color: var(--clr-accent);
+}
+
+body.dark-mode .site-footer {
+  background: #222;
+}
+

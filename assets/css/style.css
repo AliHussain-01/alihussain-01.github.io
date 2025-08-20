@@ -1,0 +1,248 @@
+/* ==================== Reset ==================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ==================== Variables ==================== */
+:root {
+  --clr-bg-light: #fff9e6;   /* light yellow */
+  --clr-bg-dark: #1a1a1a;
+  --clr-text-light: #1a1a1a;
+  --clr-text-dark: #f1f1f1;
+  --clr-accent: #ff9900;
+  --clr-muted-light: #666666;
+  --clr-muted-dark: #cccccc;
+
+  --sp-sm: 1rem;
+  --sp-md: 2rem;
+  --sp-lg: 3rem;
+
+  --fs-sm: 0.9rem;
+  --fs-base: 1rem;
+  --fs-lg: 1.5rem;
+  --fs-xl: 2rem;
+}
+
+/* ==================== Base ==================== */
+body {
+  font-family: system-ui, sans-serif;
+  background: var(--clr-bg-light);
+  color: var(--clr-text-light);
+  line-height: 1.6;
+  transition: all 0.3s ease;
+}
+
+body.dark-mode {
+  background: var(--clr-bg-dark);
+  color: var(--clr-text-dark);
+}
+
+.container {
+  max-width: 900px;
+  width: 90%;
+  margin: 0 auto;
+  padding: var(--sp-md) 0;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+  margin-bottom: var(--sp-sm);
+}
+
+p {
+  margin-bottom: var(--sp-md);
+  color: var(--clr-muted-light);
+}
+
+/* ==================== Header ==================== */
+.site-header {
+  border-bottom: 1px solid #e0e0e0;
+  background: inherit;
+}
+
+body.dark-mode .site-header {
+  background: var(--clr-bg-dark);
+  border-color: #333;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: var(--sp-sm) 0;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: var(--fs-lg);
+}
+
+.nav-links {
+  display: flex;
+  gap: var(--sp-md);
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--clr-accent);
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: var(--fs-lg);
+  cursor: pointer;
+}
+
+/* ==================== Sections ==================== */
+.section {
+  background: var(--clr-bg-light);
+  padding: var(--sp-lg);
+  border-radius: 12px;
+  margin-bottom: var(--sp-lg);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark-mode .section {
+  background: #333;
+  color: var(--clr-text-dark);
+}
+
+/* ==================== Grids ==================== */
+.projects-grid,
+.badge-grid,
+.widgets-grid {
+  display: grid;
+  gap: var(--sp-md);
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.project-card,
+.widget,
+.badge {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: var(--sp-sm);
+  text-align: center;
+  background: #fdfdfd;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.project-card:hover,
+.widget:hover,
+.badge:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.badge {
+  background: #e0f0ff;
+  color: #0055cc;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+}
+
+.widget h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.widget p {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+/* ==================== Buttons ==================== */
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border: 1px solid #e0e0e0;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+  color: var(--clr-text-light);
+  transition: 0.2s;
+}
+
+.btn:hover {
+  border-color: var(--clr-accent);
+  color: var(--clr-accent);
+}
+
+.btn-primary {
+  background: var(--clr-accent);
+  color: #fff;
+  border: none;
+}
+
+.btn-primary:hover {
+  background: #cc7a00;
+}
+
+/* ==================== Footer ==================== */
+.site-footer {
+  text-align: center;
+  padding: var(--sp-md) 0;
+  background: #fef6e3;
+}
+
+body.dark-mode .site-footer {
+  background: #222;
+  color: var(--clr-text-dark);
+}
+
+.site-footer p {
+  font-size: var(--fs-sm);
+  margin-bottom: var(--sp-sm);
+  color: var(--clr-muted-light);
+}
+
+.social-links a {
+  margin: 0 0.5rem;
+  text-decoration: none;
+  color: inherit;
+  transition: 0.2s;
+}
+
+.social-links a:hover {
+  color: var(--clr-accent);
+}
+
+/* ==================== Responsive ==================== */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .projects-grid,
+  .badge-grid,
+  .widgets-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+}
