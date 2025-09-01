@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="assets/css/style.css">
+    <title>Minimal Portfolio Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fefefe;
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        h1, h2, h3 {
+            color: #222;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 15px;
+            border-left: 5px solid #007acc;
+            overflow-x: auto;
+        }
+
+        code {
+            font-family: 'Courier New', monospace;
+        }
+
+        ul {
+            margin-bottom: 20px;
+        }
+
+        a {
+            color: #007acc;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>How to Build a Minimal Portfolio</h1>
+
+    <section id="step1">
+        <h2>Step 1: Set Up Your Project</h2>
+        <p>Create a folder for your portfolio project. Inside it, create these files:</p>
+        <ul>
+            <li><code>index.html</code> → your main HTML file</li>
+            <li><code>style.css</code> → your CSS file</li>
+        </ul>
+        <p>Your folder structure should look like this:</p>
+        <pre><code>portfolio/
+│
+├── index.html
+└── style.css
+</code></pre>
+    </section>
+
+    <section id="step2">
+        <h2>Step 2: Write the HTML</h2>
+        <p>Here’s a simple example of <code>index.html</code>:</p>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;My Minimal Portfolio&lt;/title&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;h1&gt;My Name&lt;/h1&gt;
+        &lt;p&gt;Web Developer | Designer | Programmer&lt;/p&gt;
+    &lt;/header&gt;
+
+    &lt;section id="about"&gt;
+        &lt;h2&gt;About Me&lt;/h2&gt;
+        &lt;p&gt;Hi! I'm a web developer passionate about creating clean and functional websites.&lt;/p&gt;
+    &lt;/section&gt;
+
+    &lt;section id="projects"&gt;
+        &lt;h2&gt;Projects&lt;/h2&gt;
+        &lt;div class="project"&gt;
+            &lt;h3&gt;Project One&lt;/h3&gt;
+            &lt;p&gt;A brief description of the project.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="project"&gt;
+            &lt;h3&gt;Project Two&lt;/h3&gt;
+            &lt;p&gt;A brief description of the project.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;section id="contact"&gt;
+        &lt;h2&gt;Contact&lt;/h2&gt;
+        &lt;p&gt;Email: &lt;a href="mailto:you@example.com"&gt;you@example.com&lt;/a&gt;&lt;/p&gt;
+    &lt;/section&gt;
+
+    &lt;footer&gt;
+        &lt;p&gt;&amp;copy; 2025 My Name&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </section>
+
+    <section id="step3">
+        <h2>Step 3: Add Minimal CSS</h2>
+        <p>Here’s a clean, minimal style for <code>style.css</code>:</p>
+        <pre><code>/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fefefe;
+    padding: 20px;
+}
+
+header, section, footer {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.project {
+    margin-bottom: 20px;
+}
+
+a {
+    color: #007acc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    font-size: 0.9rem;
+    color: #777;
+}</code></pre>
+    </section>
+
+    <section id="step4">
+        <h2>Step 4: Open in Browser</h2>
+        <ul>
+            <li>Save your files.</li>
+            <li>Open <code>index.html</code> in your browser to see your minimal portfolio.</li>
+        </ul>
+    </section>
+
+</body>
+</html>

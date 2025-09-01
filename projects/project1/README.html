@@ -1,0 +1,195 @@
+<h1>CS619 - Lecture Scheduler Project</h1>
+<p align="center">
+  <img src="assets/VU_Logo.png" alt="VU Logo" width="180" />
+</p>
+
+<hr>
+
+<h2>Overview</h2>
+<p>The <strong>Lecture Scheduler</strong> is a web-based application developed as part of <strong>CS619 (Virtual University of Pakistan)</strong>.</p>
+<p>It provides a complete solution for managing <strong>faculty, courses, classrooms, and lecture schedules</strong>. The system automatically generates a <strong>conflict-free weekly timetable</strong>, respecting faculty preferences and classroom availability.</p>
+<p>This project eliminates manual effort in timetable management and ensures <strong>fair slot distribution</strong>, efficient resource utilization, and an <strong>organized schedule</strong> for both faculty and students.</p>
+
+<hr>
+
+<h2>Key Features</h2>
+
+<h3>1. Faculty Management</h3>
+<ul>
+  <li>Add, edit, and remove faculty members.</li>
+  <li>Manage departments and designations (Professor, Associate Professor, etc.).</li>
+  <li>Maintain structured faculty profiles in the database.</li>
+</ul>
+
+<h3>2. Course Management</h3>
+<ul>
+  <li>Add new courses with:
+    <ul>
+      <li>Course Code</li>
+      <li>Course Title</li>
+      <li>Enrollment strength</li>
+      <li>Multimedia requirements</li>
+    </ul>
+  </li>
+  <li>Edit or delete existing courses easily.</li>
+</ul>
+
+<h3>3. Classroom Management</h3>
+<ul>
+  <li>Add, edit, and delete classrooms.</li>
+  <li>Track seating capacity.</li>
+  <li>Identify multimedia-enabled classrooms for specialized courses.</li>
+</ul>
+
+<h3>4. Faculty Preferences</h3>
+<ul>
+  <li>Faculty can specify preferred <strong>days</strong> and <strong>time slots</strong>.</li>
+  <li>The scheduler prioritizes these preferences while generating timetables.</li>
+</ul>
+
+<h3>5. Automatic Schedule Generation</h3>
+<ul>
+  <li>Automatically generates a <strong>weekly lecture schedule</strong>.</li>
+  <li>Ensures:
+    <ul>
+      <li>No faculty is double-booked.</li>
+      <li>Courses are scheduled only once per day.</li>
+      <li>Classroom conflicts are avoided.</li>
+      <li>Break times are respected.</li>
+    </ul>
+  </li>
+  <li>Algorithm balances fairness and efficient use of resources.</li>
+</ul>
+
+<h3>6. Schedule Viewer</h3>
+<ul>
+  <li>Displays the weekly timetable in a clean, tabular layout.</li>
+  <li>Shows:
+    <ul>
+      <li>Course Code &amp; Title</li>
+      <li>Faculty Name</li>
+      <li>Classroom ID</li>
+      <li>Time Slot</li>
+    </ul>
+  </li>
+  <li>Color-coded rows enhance readability.</li>
+</ul>
+
+<hr>
+
+<h2>Technology Stack</h2>
+<ul>
+  <li><strong>Backend:</strong> PHP (Core PHP)</li>
+  <li><strong>Database:</strong> MySQL / MariaDB (via XAMPP)</li>
+  <li><strong>Frontend:</strong> HTML, CSS, JavaScript</li>
+  <li><strong>Environment:</strong> XAMPP (Apache + MySQL)</li>
+</ul>
+
+<hr>
+
+<h2>Dashboard</h2>
+<p align="center">
+  <img src="assets/screenshots/dashboard.png" alt="Dashboard Screenshot" width="700"/>
+</p>
+
+<hr>
+
+<h3>Faculty Management</h3>
+<ul>
+  <li>Add, edit, and delete faculty members.</li>
+  <li>Manage departments and designations.</li>
+</ul>
+<p align="center">
+  <img src="assets/screenshots/faculty1.png" alt="Manage Faculty Screenshot 1" width="500"/>
+  <img src="assets/screenshots/faculty2.png" alt="Manage Faculty Screenshot 2" width="500"/>
+</p>
+
+<hr>
+
+<h3>Course Management</h3>
+<ul>
+  <li>Add new courses with code, title, enrollment, and multimedia requirements.</li>
+  <li>Edit or delete existing courses.</li>
+</ul>
+<p align="center">
+  <img src="assets/screenshots/courses.png" alt="Manage Courses Screenshot" width="600"/>
+</p>
+
+<hr>
+
+<h3>Classroom Management</h3>
+<ul>
+  <li>Add, edit, and remove classrooms and labs, specifying ID, Name, Capacity, and Multimedia availability.</li>
+  <li>Edit or delete existing classrooms.</li>
+</ul>
+<p align="center">
+  <img src="assets/screenshots/classrooms.png" alt="Manage Classroom Screenshot" width="600"/>
+</p>
+
+<hr>
+
+<h3>Schedule Management</h3>
+<p align="center">
+  <img src="assets/screenshots/schedule.png" alt="Schedule Screenshot" width="700"/>
+</p>
+
+<hr>
+
+<h2>Setup Instructions</h2>
+<ol>
+  <li>
+    <strong>Install Prerequisites</strong>
+    <ul>
+      <li>Download and install <a href="https://www.apachefriends.org/download.html">XAMPP</a> or any PHP + MySQL stack.</li>
+    </ul>
+  </li>
+  <li>
+    <strong>Clone the Repository</strong><br>
+    Place the project folder inside <code>htdocs</code> (XAMPP).<br>
+    Example:
+    <pre><code>C:\xampp\htdocs\scheduler</code></pre>
+  </li>
+  <li>
+    <strong>Database Setup</strong>
+    <ul>
+      <li>Open <strong>phpMyAdmin</strong> at <code>http://localhost/phpmyadmin</code>.</li>
+      <li>Create a database named <code>scheduler</code>.</li>
+      <li>Import the provided SQL file:
+        <pre><code>mysql -u root -p scheduler &lt; scheduler.sql</code></pre>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <strong>Run the Project</strong><br>
+    Start Apache &amp; MySQL in XAMPP Control Panel and open:
+    <pre><code>http://localhost/scheduler</code></pre>
+  </li>
+</ol>
+
+<hr>
+
+<h2>Project Structure</h2>
+<pre><code>scheduler/
+  assets/          # CSS, JS, images
+    style.css
+    script.js
+    VU_Logo.png
+  database/        # MySQL database
+    scheduler.sql
+  config.php       # Database connection
+  functions.php    # Core functions
+  index.php        # Dashboard
+  faculty.php      # Faculty management
+  courses.php      # Course management
+  classrooms.php   # Classroom management
+  editFaculty.php
+  editCourses.php
+  editClassrooms.php
+  schedule.php     # Weekly timetable + auto scheduler
+
+</code></pre>
+
+<hr>
+
+<h2> Authors</h2>
+<p>Developed as part of <strong>CS619 - Final Year Project</strong> at <strong>Virtual University of Pakistan</strong>.</p>
